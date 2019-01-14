@@ -1,3 +1,5 @@
 exports.count = function(req, res) {
-    return 5;
+    return new Promise((resolve, reject) => {
+        setTimeout(() => reject(5), 3000)
+      });
 }
