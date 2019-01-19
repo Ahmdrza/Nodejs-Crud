@@ -1,5 +1,12 @@
 var user = require('../models/user');
 
+//add user
+exports.add_user = function(req, res) {
+    let userData= req.body;
+    console.log(userData.name);
+};
+
+//get user listing
 exports.user_list = async function(req, res) {
     try {
         let result = await user.count();
